@@ -1,0 +1,173 @@
+
+
+
+
+.page {
+	padding-left: 16px;
+	font-size: 32px;
+	font-weight: 400;
+	font-family: 'Spectral SC', serif;
+}
+
+a {
+	font-family: 'Spectral SC', serif;
+	font-weight: 600;
+	color: black;
+	text-decoration-color: #BEC19A;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 3px;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.home-grid {
+	display: grid;
+	grid-template-columns: 40% 60%;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+p h1 {
+	font-family: 'Spectral', serif;
+}
+
+.home-text h1 {
+	font-size: 24px;
+	font-weight: 600;
+	padding-top: 50px;
+}
+
+.home-text p {
+	font-weight: 400;
+}
+
+.home-img img {
+	width: 80%;
+}
+
+.home-sidebar {
+	display: flex; 
+	flex-direction: column;
+}
+
+.home-sidebar-cell {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.home-sidebar-cell img {
+ 	width: 30%;
+ 	padding-left: 100px;
+ 	/*height: 40%;*/
+}
+
+.home-sidebar-cell a {
+	font-family: 'Spectral', serif;
+	font-weight: 400;
+	font-size: 24px;
+	color: black;
+	text-decoration-color: #BEC19A;
+	text-underline-offset: 4px;
+	text-decoration-thickness: 3px;
+}
+
+.page-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.page-list a {
+	font-weight: 400;
+	padding-left: 16px;
+	padding-bottom: 10px;
+}
+
+.home-link {
+	padding-left: 16px;
+	padding-bottom: 0px;
+}
+
+.page-wrapper {
+	display: flex;
+	align-items: flex-start;
+	padding-bottom: 36px;
+	/*border-bottom: solid;
+	border-bottom-color: #BEC19A;
+	border-bottom-width: 2px;*/
+}
+
+.page-wrapper h1 {
+	font-family: 'Spectral SC', serif;
+	font-size: 100px;
+	font-weight: 400;
+}
+
+.page-list {
+	margin-right: 90px;
+	font-size: 18px;
+}
+
+.page-wrapper div {
+	line-height: 100%;
+}
+
+.colors-tools {
+	padding-top: 30px;
+	padding-bottom: 30px;
+	display: flex;
+}
+
+.section-header {
+	font-weight: 400;
+	font-size: 24px;
+	padding-left: 16px;
+}
+
+.colors-tools div {
+	padding-right: 50px;
+}
+
+.colors-tools li {
+	padding-bottom: 7px;
+}
+
+.instructions-wrapper {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 72px;
+}
+
+.instructions-wrapper p {
+	padding-left:  16px;
+	padding-right: 200px;
+	line-height: 175%;
+}
+
+.instructions-wrapper img {
+	width: 30%;
+	padding-left:  72px;
+	padding-right: 72px;
+}
+
+.instructions-left-wrapper {
+	display: flex;
+	flex-direction: row;
+	padding-bottom: 72px;
+}
+
+.instructions-left-wrapper p {
+	padding-left:  72px;
+	padding-right: 200px;
+	line-height: 175%;
+}
+
+.instructions-left-wrapper img {
+	width: 30%;
+	padding-left:  72px;
+	padding-right: 72px;
+}
+
