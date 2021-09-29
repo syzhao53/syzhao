@@ -1,0 +1,16 @@
+.large-header {
+	font-family: 'Nunito', sans-serif;
+	font-size: 36px;
+}
+
+.body-text {
+	font-family: 'Montserrat', sans-serif;
+	
+	/* not working */
+	font-weight: medium;
+}
+
+.section-header {
+	font-family: 'Nunito', sans-serif;
+	font-size: 24px;
+}
