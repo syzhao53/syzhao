@@ -1,13 +1,13 @@
 .large-header {
-	font-family: 'Nunito Sans', sans-serif;
-	font-size: 36px;
-		text-decoration: none;
-	color: black;
+	font-family: 'Cormorant', serif;
+	font-size: 54px;
 	font-weight: 700;
+	text-decoration: none;
+	color: white;
 }
 
 .section-header {
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Cormorant', serif;
 	font-size: 24px;
 }
 
@@ -19,7 +19,7 @@
 .intro-flex p {
 	margin-right: 5%;
 	margin-bottom: 3%;
-	width: 95%;
+	width: 50%;
 }
 
 iframe {
@@ -67,22 +67,34 @@ iframe {
 }
 
 .theme-header {
-	font-family: 'Nunito Sans', sans-serif;
+	font-family: 'Cormorant', serif;
 	font-size: 18px;
+	font-weight: 700;
 }
 
 section {
 	font-size: 24px;
 }
 
+img {
+	filter: grayscale(70%);
+}
+
+iframe {
+	filter: grayscale(70%);
+}
+
 body {
 	margin-left: 30px;
 	margin-right: 30px;
-	/*background-color: #a9c7b4; */
+	background-color: #2e4a3e;
+	color: white;
 }
 
 p {
-	font-family: 'Montserrat', sans-serif;
+	font-weight:  500;
+	font-family: 'Cormorant', serif;
 	line-height: 175%;
 	font-size: 16px;
+
 }
