@@ -1,0 +1,94 @@
+div {
+	display: flex;
+	flex-direction: horizontal;
+	align-content: center;
+	justify-content: center;
+}
+
+
+#abstract:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+#abstract {
+	width: 60%;
+	height: 60%;
+}
+
+.redcircle {
+	animation: spinType 3s ease-out infinite 1s;
+}
+
+.redshape {
+	animation: spinType3 3s ease-out infinite 1s;
+}
+
+.greenbar {
+	animation: spinType2 3s ease-out infinite 1s;
+}
+
+.yellowshaperight {
+	animation: spinType2 3s ease-out infinite 1s;
+}
+
+.yellowshapeleft {
+	animation: spinType4 3s ease-out infinite 1s;
+}
+
+@keyframes spinType2 {
+  0% {
+  	transform: rotate(.5turn);
+  }
+  60% {
+    transform: rotate(.7turn);
+  }
+  100% {
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes spinType4 {
+  0% {
+  	transform: rotateX(40deg);
+  }
+  60% {
+    transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+@keyframes spinType3 {
+  0% {
+    transform: rotateY(40deg);
+                transform: rotateX(80deg);
+  }
+  60% {
+    transform: rotateY(150deg);
+            transform: rotateX(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+                transform: rotateX(360deg);
+  }
+}
+
+@keyframes spinType {
+  0% {
+    transform: rotateY(40deg);
+        transform: rotateX(40deg);
+  }
+  60% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+
+
