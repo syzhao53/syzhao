@@ -1,0 +1,41 @@
+
+body {
+  background-color: antiquewhite;
+}
+
+.title-header {
+  font-size: 70;
+  font-family: serif;
+  color: darkolivegreen;
+}
+
+.desription {
+  font-size: 30;
+  font-family: serif;
+  color: black;
+}
+
+.caption {
+  font-size: 20;
+  font-family: serif;
+  color: black;
+}
+
+.flex-container {
+display: flex;
+}
+
+.col {
+  float: left;
+  width: 50%;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+h1:hover, h2:hover {
+  background-color: rgb(230, 230, 160);
+}
