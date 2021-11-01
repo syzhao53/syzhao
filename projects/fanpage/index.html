@@ -1,9 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Test</title>
+	<title>Threads</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-  <img src="assets/barbietub.jpg" width="500" height="500">
+
+  <div class="options">
+    <div class="gallery-button">
+      Gallery View
+    </div>
+  </div>
+
+  <div class="columns">
+    <div class="caption-col">
+      <div class="caption">TODAY I LEARNED</div>
+    </div>
+
+    <div class="image-col">
+      <div class="row-top">
+        <div class="img-cell">
+          <img src="red/redglowhands.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redgrapefruit.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redvelcrotongues.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="red/redhearthair.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redlipsfangs.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redicecream.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="red/redheartcarvedapple.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redstrawberrytoast.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="red/redmcdonaldssyringe.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="orange/orangepizzabra.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangejellypeach.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangebrokenapple.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="orange/orangeflan.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangehoney.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangehearttaillights.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="orange/orangebeegummies.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangeclementine.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="orange/orangeglazebun.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="yellow/yellowsmileeye.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellowbreadshoes.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellowbutterstick.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="yellow/yellowhazardouswaste.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellowhair.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellowbeecandies.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="yellow/yellowbanana.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellownoodles.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="yellow/yellowmermaid.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="green/greenhellokittyfruit.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greenguitar.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greencucumber.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="green/greencabbagedog.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greenwater.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greenpepper.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="green/greenpondkeys.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greentongue.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="green/greenwhatsapp.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="blue/blueballoonshoe.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/blueglazedripeye.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/blueheels.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="blue/bluesweater.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/bluewater.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/blueqtips.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="blue/bluejellyslice.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/bluetoothpaste.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="blue/bluecontactseye.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="purple/purpleskeletons.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purplejellykey.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purplefishbucket.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="purple/purplecake.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purpleorb.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purplehandglow.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="purple/purplecereal.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purplecrosswalk.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="purple/purpleheels.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="pink/pinkbloatedlips.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkshinydonut.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkjellocups.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="pink/pinkjellyblocks.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkflowerlips.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkbrain.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="pink/pinkdentures.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkheartmacarons.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="pink/pinkheartbra.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="monochrome/monomascaralips.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monohearthair.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monofacecloset.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="monochrome/monopackagedfaces.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monoeyehair.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monobarbietub.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="monochrome/monoheartcookiedough.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monocoffee.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monocoffeebubble.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="monochrome/monofacemacarons.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monobutterflyear.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monomushroomear.jpg">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="img-cell">
+          <img src="monochrome/monocleardrops.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monosadcereal.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monoseals.jpg">
+        </div>
+      </div>
+
+      <div class="row-bottom">
+        <div class="img-cell">
+          <img src="monochrome/monoheartsock.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monoteethnails.jpg">
+        </div>
+        <div class="img-cell">
+          <img src="monochrome/monooreo.jpg">
+        </div>
+      </div>
+
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="main.js"></script>
+
 </body>
 </html>

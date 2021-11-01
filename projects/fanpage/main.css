@@ -1,0 +1,113 @@
+.columns {
+	display: flex;
+	flex-direction: column;
+}
+
+body {
+	margin: auto;
+		font-family: 'Helvetica Neue', sans-serif;
+
+}
+
+/* independently scrolling columns CSS code based on: 
+https://newbedev.com/independent-column-scroll-in-html-page */
+
+.caption-col {
+  scroll-snap-type: y mandatory;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 35%;
+  height: 100%;
+  overflow: auto;
+}
+
+.caption {
+	scroll-snap-align: start;
+	color: black;
+	text-align: left;
+	font-weight: 500;
+	font-size: 400%;
+	width: 50%;
+}
+
+.caption:hover {
+	color: blueviolet;
+	cursor: url(monochrome/monooreo.jpg), pointer;
+}
+
+.image-col {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: fixed;
+	width: 65%;
+	height: 100%;
+	right: 0;
+	overflow: auto;
+}
+
+.image-col-gallery {
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding-bottom: 30px;
+	justify-content: space-evenly;
+}
+
+.row-top {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding-bottom: 30px;
+	justify-content: space-evenly;
+	padding-top: 30px;
+}
+
+.row-bottom {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	padding-bottom: 90px;
+	justify-content: space-evenly;
+}
+
+.img-cell img {
+	width: 200px;
+	height: 200px;
+	object-fit: cover;
+}
+
+.img-cell-gallery:hover {
+
+}
+
+
+.gallery-button {
+  padding: 20px 50px;
+  border-radius: 30px;
+  background-color:  aliceblue;
+  color:  black;
+  font-size:  60px;
+  font-size: 20px;
+  text-align:  center;
+  transition:  all 100ms;
+}
+
+.gallery-button:hover {
+	color: red;
+}
+
+.padding {
+	padding-top: 30px;
+}
+
+/* add specific image adjustment classes for different directions */
+
