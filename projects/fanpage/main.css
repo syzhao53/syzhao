@@ -13,8 +13,6 @@ body {
 https://newbedev.com/independent-column-scroll-in-html-page */
 
 .caption-col {
-  scroll-snap-type: y mandatory;
-  background-color: aliceblue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,22 +23,43 @@ https://newbedev.com/independent-column-scroll-in-html-page */
   overflow: auto;
 }
 
+.title {
+	font-size: 2em;
+	text-align: left;
+
+}
+
 .caption {
 	scroll-snap-align: start;
 	color: black;
 	text-align: left;
 	font-weight: 500;
-	font-size: 400%;
+	font-size: 3em;
 	width: 50%;
 }
 
 .caption:hover {
-	color: blueviolet;
-	cursor: url(monochrome/monooreo.jpg), pointer;
+	color: #1DA1F2;
 }
 
-.image-col {
-	display: flex;
+.image-col-single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 65%;
+  height: 100%;
+  right: 0;
+  overflow: auto;
+}
+
+.image-col-single-gallery {
+	display: none;
+}
+
+.image-col-grid {
+	display: none;
 	flex-direction: column;
 	align-items: center;
 	position: fixed;
@@ -52,6 +71,7 @@ https://newbedev.com/independent-column-scroll-in-html-page */
 
 .image-col-gallery {
 	width: 100%;
+	display: flex;
 }
 
 .row {
@@ -79,9 +99,67 @@ https://newbedev.com/independent-column-scroll-in-html-page */
 	justify-content: space-evenly;
 }
 
+.options {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.gallery-button {
+	margin-top: 15px;
+  padding: 15px 40px;
+  border: 2px solid black;
+  color:  black;
+  font-size:  1.1em;
+  text-align:  center;
+  transition:  all 100ms;
+  border-color: black;
+  width: 10%;
+}
+
+.gallery-button:hover {
+	background-color: black;
+	color:  white;
+}
+
+.gallery-button-toggled {
+	background-color: black;
+	color:  white;
+}
+
+.gallery-button-toggled:hover {
+	background-color: white;
+	color:  black;
+}
+
+.overlay {
+  transition: .5s ease;
+  opacity: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
 .img-cell img {
 	width: 200px;
 	height: 200px;
+	object-fit: cover;
+
+	/*   opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden; */
+}
+
+.img-cell-large img {
+	width: 600px;
+	height: 600px;
 	object-fit: cover;
 }
 
@@ -89,24 +167,24 @@ https://newbedev.com/independent-column-scroll-in-html-page */
 
 }
 
-
-.gallery-button {
-  padding: 20px 50px;
-  border-radius: 30px;
-  background-color:  aliceblue;
-  color:  black;
-  font-size:  60px;
-  font-size: 20px;
-  text-align:  center;
-  transition:  all 100ms;
+.img-cell:hover .overlay {
+  opacity: 1;
 }
 
-.gallery-button:hover {
-	color: red;
+.text-overlay {
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
 }
 
 .padding {
 	padding-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+	.columns {
+		display: none;
+	}
 }
 
 /* add specific image adjustment classes for different directions */

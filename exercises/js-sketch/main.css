@@ -1,0 +1,27 @@
+div {
+	display: flex;
+	flex-direction: horizontal;
+	align-content: center;
+	justify-content: center;
+}
+
+#abstract {
+	width: 60%;
+	height: 60%;
+}
+
+.greenbar-change {
+	color: lightblue;
+}
+
+.yellowshaperight {
+
+}
+
+.yellowshapeleft {
+
+}
+
+.redshape {
+
+}
