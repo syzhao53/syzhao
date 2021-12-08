@@ -21,19 +21,65 @@ if (originalHour < 12) { // AM
 	timeOfDay += "PM";
 }
 
+// display time
 document.getElementById("time").innerHTML = hour + ":" + minutes + " " + timeOfDay;
+
+let singleImage = document.querySelector(".menu");
+
+// menu interaction
+let menuSvg = document.querySelector(".menu");
+
+function openMenu() {
+
+}
+
+menuSvg.addEventListener("click", openMenu);
+
+
 
 // songs
 let songs = new Map();
 songs.set(0, "do you know how much i love you");
 songs.set(1, "Aubrey Plaza");
+songs.set(11, "Winona");
+songs.set(12, "All Too Well");
+songs.set(13, "1999");
+songs.set(14, "Dionne");
+songs.set(22, "Watery Brain");
+songs.set(23, "Every Colour");
 
 // artists
 let artists = new Map();
 artists.set(0, "Grady");
 artists.set(1, "Nick Ward");
+artists.set(11, "Miloe");
+artists.set(12, "Taylor Swift");
+artists.set(13, "beebadoobee");
+artists.set(14, "The Japanese House ft. Justin Vernon");
+artists.set(22, "Valley");
+artists.set(23, "Luca Fogale");
 
-/*if (songs.has(originalHour)) {
+
+let frames = new Map();
+frames.set(0, "<iframe src=\"https://open.spotify.com/embed/track/7CaGcwpmOrOWSSs38oXcj5?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(1, "<iframe src=\"https://open.spotify.com/embed/track/6edAjSENRwFF2ebfkEFXuK?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(11, "<iframe src=\"https://open.spotify.com/embed/track/50CrMqvVH178XRNNhhXfTy?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(13, "<iframe src=\"https://open.spotify.com/embed/track/0oS6978exXanyIZJD4cdgV?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(12, "<iframe src=\"https://open.spotify.com/embed/track/5enxwA8aAbwZbf5qCHORXi?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(14, "<iframe src=\"https://open.spotify.com/embed/track/15gL4n95OG5KEQLCMXPQzp?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(22, "<iframe src=\"https://open.spotify.com/embed/track/4NYBfPho54Nzsb77hBLK2g?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+frames.set(23, "<iframe src=\"https://open.spotify.com/embed/track/7nNq5Q2Khh1bOyF1QQFLjd?utm_source=generator\" width=\"5.85%\" height" + 
+	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
+
+
+if (songs.has(originalHour)) {
 	document.getElementById("song").innerHTML = songs.get(originalHour);
 } else {
 	document.getElementById("song").innerHTML = "Taking a break!";
@@ -41,34 +87,37 @@ artists.set(1, "Nick Ward");
 
 if (artists.has(originalHour)) {
 	document.getElementById("artist").innerHTML = "by " + artists.get(originalHour);
-}*/
+}
 
-	document.getElementById("song").innerHTML = songs.get(1);
-		document.getElementById("artist").innerHTML = "by " + artists.get(1);
+if (frames.has(originalHour)) {
+	console.log("draw frame");
+	document.getElementById("frame").innerHTML = frames.get(originalHour);
+}
 
-
-let displayLyrics = false; // for instrumental
-
-let frames = new Map();
-frames.set(0, "<iframe id=\"frame\" src=\"https://open.spotify.com/embed/track/7CaGcwpmOrOWSSs38oXcj5?utm_source=generator\" width=\"5.85%\" height" + // do you know how much i love you
-	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
-frames.set(1, "<iframe src=\"https://open.spotify.com/embed/track/6edAjSENRwFF2ebfkEFXuK?utm_source=generator\" width=\"5.85%\" height" + 
-	"=\"80\" frameBorder=\"0\" allowfullscreen=\"\" allow=\"autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture\"></iframe>");
-
-
-
-//document.getElementById("frame").innerHTML = frames.get(originalHour);
-document.getElementById("frame").innerHTML = frames.get(1);
-
-originalHour = 1;
-let gradient = false;
-
-if (originalHour == 1) {
+// gradients
+if (originalHour == 0) { // do you know how much i love you
 	var granimInstance = new Granim({
 	   element: '#granim-canvas',
 	   name: 'granim',
 	   opacity: [1, 1],
-	   stateTransitionSpeed: 500,
+	   	//   direction: 'radial',
+
+	   stateTransitionSpeed: 700,
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#A0521E', '#260804'],
+	               ['#CB742A', '#561E1E']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 1) { // aubrey plaza
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   opacity: [1, 1],
+	   stateTransitionSpeed: 00,
 	   states : {
 	       "default-state": {
 	           gradients: [
@@ -92,6 +141,98 @@ if (originalHour == 1) {
 	       }
 	   }
 	});
+} else if (originalHour == 11) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 500,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#3B508A', '#343766'],
+	               ['#90a0ab', '#657554']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 13) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 1000,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#bf97a6', '#b86c89'],
+	               ['#c6cf8c', '#eddae7']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 12) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 1000,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#140504', '#630700'],
+	               ['#a11818', '#210400'],
+	               ['#630700', '#140504']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 14) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 1000,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#c5c9d1', '#e8eaed'],
+	               ['#f0f2d8', '#c7c7c7'],
+	               ['#444547', '#706e73']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 22) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 1000,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#b2d9db', '#ded9bf'],
+	               ['#e6dca8', '#bccdeb']
+	           ]
+	       }
+	   }
+	});
+} else if (originalHour == 23) {
+	var granimInstance = new Granim({
+	   element: '#granim-canvas',
+	   name: 'granim',
+	   stateTransitionSpeed: 1000,
+	   opacity: [1, 1],
+	   states : {
+	       "default-state": {
+	           gradients: [
+	               ['#0a0a1a', '#180a1a'],
+	               ['#1a0a0c', '#38060c']
+	           ]
+	       }
+	   }
+	});
 } else {
 	var granimInstance = new Granim({
    	element: '#granim-canvas',
@@ -109,29 +250,6 @@ if (originalHour == 1) {
 }
 
 
-document.getElementById("lyrics").innerHTML = "Do you know who you are?<br>Or do you just take a guess?<br>Paint a pretty picture<br>Then try your best?" +
-"<br>Do you play the part?<br>When the walls come up<br>But the tears don't stop<br>Then it all comes down<br>And you're left there in the dark." + 
-"<br><br>Maybe I cried, maybe I might<br>Maybe it's all you make me do<br>I'll stop blaming it on you<br>Maybe it's pride, maybe I lied<br>I thought I was bulletproof<br>Until the day that I met you";
-
-let lyricView = false;
-let lyricDiv = document.getElementById("lyrics");
-let songInfo = document.getElementById("song-info");
-
-
-function switchLyricView() {
-	if (!lyricView) {
-		lyricDiv.remove();
-		lyricView = true;
-	} else if (lyricView) {
-		document.body.appendChild(lyricDiv);
-		lyricView = false;
-	}
-
-}
-
-switchLyricView();
-songInfo.addEventListener("mouseover", switchLyricView);
-songInfo.addEventListener("mouseleave", switchLyricView);
 
 
 

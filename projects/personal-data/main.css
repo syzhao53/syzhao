@@ -3,9 +3,10 @@ body {
 	color: white;
 	margin-top: 0;
 	margin-bottom: 0;
+	margin-left: 0;
 
 	height: 100%;
-	overscroll-behavior-y: none;
+	overflow: hidden;
 }
 
 .time-display {
@@ -35,8 +36,44 @@ body {
 	font-weight: 400;
 }
 
-#song-info:hover {
+.menu {
+	position: absolute;
+	width: 3.5%;
+	height: 3.5%;
+	top: 2%;
+	left: 2%;
+}
 
+.pages {
+	visibility: hidden;
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	left: 2%;
+	top: 2%;
+	width: 15%;
+	height: 40%;
+	color: black;
+	background: rgb(255, 255, 255, .5);
+	border-radius: 7%;
+}
+
+.link {
+	visibility: hidden;
+	padding-top: 5%;
+	padding-left: 10%;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	text-decoration: none;
+	color: black;
+}
+
+.pages-open {
+	visibility: visible;
+}
+
+.menu:hover {
+	fill: #787878;
 }
 
 #frame {
@@ -52,9 +89,3 @@ body {
 	height: 100%;
 }
 
-#lyrics {
-	position: absolute;
-	top: 5%;
-	left: 5%;
-	max-width: 30%;
-}
