@@ -24,16 +24,16 @@ if (originalHour < 12) { // AM
 // display time
 document.getElementById("time").innerHTML = hour + ":" + minutes + " " + timeOfDay;
 
-let singleImage = document.querySelector(".menu");
+// let singleImage = document.querySelector(".menu");
 
-// menu interaction
-let menuSvg = document.querySelector(".menu");
+// // menu interaction
+// let menuSvg = document.querySelector(".menu");
 
-function openMenu() {
+// function openMenu() {
 
-}
+// }
 
-menuSvg.addEventListener("click", openMenu);
+// menuSvg.addEventListener("click", openMenu);
 
 
 
