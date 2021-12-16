@@ -1,9 +1,6 @@
-
-
-
-
 .page {
-	padding-left: 16px;
+	padding-left: 32px;
+	padding-top: 12px;
 	font-size: 32px;
 	font-weight: 400;
 	font-family: 'Spectral SC', serif;
@@ -25,7 +22,7 @@ a:hover {
 .home-grid {
 	display: grid;
 	grid-template-columns: 40% 60%;
-	padding-left: 16px;
+	padding-left: 32px;
 	padding-right: 16px;
 }
 
